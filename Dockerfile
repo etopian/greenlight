@@ -9,6 +9,7 @@ ENV BUNDLE_APP_CONFIG="$RAILS_ROOT/.bundle"
 # Make the directory and set as working.
 RUN mkdir -p $RAILS_ROOT
 WORKDIR $RAILS_ROOT
+RUN gem install bundler
 
 ARG BUILD_PACKAGES="build-base curl-dev git"
 ARG DEV_PACKAGES="postgresql-dev sqlite-libs sqlite-dev yaml-dev zlib-dev nodejs yarn"
